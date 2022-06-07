@@ -1,0 +1,124 @@
+body {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 700px;
+  font-family: "Quicksand", sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f8f0df;
+}
+form {
+  /* background-color: rgb(209, 52, 52); */
+  padding: 10px;
+}
+.navBarCities {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.navBarCities a {
+  color: #79b4b7;
+  line-height: 40px;
+  flex-grow: 1;
+  padding: 10px;
+  position: relative;
+  transition: all 250ms ease-in-out;
+}
+
+.navBarCities span {
+  position: absolute;
+  right: 10px;
+  transition: all 250ms ease-in-out;
+}
+.navBarCities a.choosen {
+  /* .choosen JS */
+  cursor: default;
+  background-color: #fefbf3;
+  color: #9d9d9d;
+  font-weight: 600;
+}
+.navBarCities a.choosen span {
+  right: 40px;
+}
+
+.navBarCities a:not(.choosen):hover {
+  background-color: #79b4b7;
+  color: #fefbf3;
+}
+.navBarCities a:not(.choosen):hover > span {
+  right: 40px;
+}
+
+.mainCity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mainCity div.mainCity__bigInfo {
+  background-color: #fefbf3;
+  color: #9d9d9d;
+  font-weight: 600;
+  flex-grow: 5;
+  padding: 20px;
+}
+
+.mainCity__bigInfo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mainCity__smallInfo li {
+  background-color: #f8f0df;
+  color: #79b4b7;
+  padding: 10px 0;
+  width: 150px;
+  height: 40px;
+  position: relative;
+  transition: all 250ms ease-in-out;
+}
+.mainCity__smallInfo li h2 {
+  position: absolute;
+  right: 10px;
+  transition: all 250ms ease-in-out;
+}
+.mainCity__smallInfo li:hover > h2 {
+  right: 45px;
+}
+
+.mainCity__smallInfo li.choosen {
+  /* JS .choosen*/
+  background-color: #fefbf3;
+  color: #9d9d9d;
+  font-weight: 600;
+  border-left: none;
+}
+
+.mainCity__smallInfo li.choosen h2 {
+  right: 45px;
+}
+
+.mainCity__smallInfo li:not(.choosen):hover {
+  background-color: #79b4b7;
+  color: #fefbf3;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+}
+
+input[type="text"] {
+  color: #79b4b7;
+  border: 1px solid #79b4b7;
+  background-color: #fefbf3;
+  padding: 0 3px;
+  width: 100%;
+  max-width: 150px;
+}

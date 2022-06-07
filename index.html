@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navBarCities">
+        <a class="navBarCities__Odessa choosen" href="#"><span>Odessa</span></a>
+        <a class="navBarCities__London" href="#"><span>London</sapn></a>
+        <a class="navBarCities__Paris" href="#"><span>Paris</span></a>
+        <a class="navBarCities__Lisbon" href="#"><span>Lisbon</span></a>
+      </nav>
+      <form action="#"><input type="text" placeholder="SEARCH" /></form>
+    </header>
+    <section class="mainCity">
+      <div class="mainCity__bigInfo">
+        <div>18/25 ℃</div>
+        <div><span>🌞</span> Sunny</div>
+      </div>
+      <ul class="mainCity__smallInfo">
+        <li class="choosen"><h2>Monday</h2></li>
+        <li><h2>Tuesday</h2></li>
+        <li><h2>Wednesday</h2></li>
+        <li><h2>Thursday</h2></li>
+        <li><h2>Friday</h2></li>
+      </ul>
+    </section>
+    <footer>Coded by Alina</footer>
+    <script src="./src/index.js"></script>
+  </body>
+</html>
