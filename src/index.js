@@ -34,18 +34,13 @@ function getRandomTemperature(averageTemp) {
 }
 
 function searchWeather(cityOrDay, flagPlace) {
-  // console.log(cityOrDay.parentElement.parentElement.className);
-
-  // console.log(flagPlace);
   let cityOrDayCheck;
   if (flagPlace === "searchEngine") {
-    console.log("check");
     cityOrDayCheck = cityOrDay;
   }
 
   cityOrDayCheck =
     cityOrDayCheck || cityOrDay.parentElement.parentElement.className;
-  console.log(cityOrDay, "after");
   if (cityOrDayCheck === "navBarCities" || flagPlace === "searchEngine") {
     let city = cityOrDay.innerText;
     if (flagPlace === "searchEngine") {
