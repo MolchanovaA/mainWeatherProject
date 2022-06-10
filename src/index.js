@@ -28,7 +28,6 @@ function setWeatherToPage({ temp, hum, genInfo, city, flag }) {
 }
 
 function getRandomTemperature(averageTemp) {
-  console.log(averageTemp);
   let min = averageTemp - 3;
   let max = averageTemp + 3;
   return Math.round(Math.random(max - min) + min);
@@ -37,10 +36,21 @@ function getRandomTemperature(averageTemp) {
 function searchWeather(cityOrDay, flagPlace) {
   // console.log(cityOrDay.parentElement.parentElement.className);
 
-  let cityOrDayCheck = cityOrDay.parentElement.parentElement.className;
+  // console.log(flagPlace);
+  let cityOrDayCheck;
+  if (flagPlace === "searchEngine") {
+    console.log("check");
+    cityOrDayCheck = cityOrDay;
+  }
 
-  if (cityOrDayCheck === "navBarCities") {
+  cityOrDayCheck =
+    cityOrDayCheck || cityOrDay.parentElement.parentElement.className;
+  console.log(cityOrDay, "after");
+  if (cityOrDayCheck === "navBarCities" || flagPlace === "searchEngine") {
     let city = cityOrDay.innerText;
+    if (flagPlace === "searchEngine") {
+      city = cityOrDay;
+    }
     let apiKey = `47acee420b645368c8f4f5042bbda62e`;
     let apiUrlCity = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     flagPlace = flagPlace || "false";
@@ -60,7 +70,6 @@ function searchWeather(cityOrDay, flagPlace) {
     axios.get(apiUrlCity).then(showApiResponce);
   } else {
     let tempForRandom = document.querySelector(".temp").innerText;
-    console.log(tempForRandom);
     let randomWeatherData = {
       temp: getRandomTemperature(tempForRandom),
       hum: getRandomTemperature(tempForRandom) + 40,
