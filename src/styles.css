@@ -35,22 +35,22 @@ form {
   right: 10px;
   transition: all 250ms ease-in-out;
 }
-.navBarCities a.choosen {
+.navBarCities a.choosenBigBar {
   /* .choosen JS */
   cursor: default;
   background-color: #fefbf3;
   color: #9d9d9d;
   font-weight: 600;
 }
-.navBarCities a.choosen span {
+.navBarCities a.choosenBigBar span {
   right: 40px;
 }
 
-.navBarCities a:not(.choosen):hover {
+.navBarCities a:not(.choosenBigBar):hover {
   background-color: #79b4b7;
   color: #fefbf3;
 }
-.navBarCities a:not(.choosen):hover > span {
+.navBarCities a:not(.choosenBigBar):hover > span {
   right: 40px;
 }
 
@@ -70,10 +70,17 @@ form {
 
 .mainCity__bigInfo {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-around;
   align-items: center;
 }
 
+.temInfo {
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  justify-content: space-between;
+}
 .mainCity__smallInfo li {
   background-color: #f8f0df;
   color: #79b4b7;
@@ -92,7 +99,7 @@ form {
   right: 45px;
 }
 
-.mainCity__smallInfo li.choosen {
+.mainCity__smallInfo li.choosenSmallBar {
   /* JS .choosen*/
   background-color: #fefbf3;
   color: #9d9d9d;
@@ -100,11 +107,11 @@ form {
   border-left: none;
 }
 
-.mainCity__smallInfo li.choosen h2 {
+.mainCity__smallInfo li.choosenSmallBar h2 {
   right: 45px;
 }
 
-.mainCity__smallInfo li:not(.choosen):hover {
+.mainCity__smallInfo li:not(.choosenSmallBar):hover {
   background-color: #79b4b7;
   color: #fefbf3;
   cursor: pointer;

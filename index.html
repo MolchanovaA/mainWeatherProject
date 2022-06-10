@@ -18,24 +18,32 @@
   <body>
     <header>
       <nav class="navBarCities">
-        <a class="navBarCities__Odessa choosen" href="#"><span>Odessa</span></a>
-        <a class="navBarCities__London" href="#"><span>London</sapn></a>
-        <a class="navBarCities__Paris" href="#"><span>Paris</span></a>
-        <a class="navBarCities__Lisbon" href="#"><span>Lisbon</span></a>
+        <a class="city_1 choosenBigBar" href="#"
+          ><span class="defaultCity Odessa">Odessa</span></a
+        >
+        <a class="city_2" href="#"><span class="London">London</span></a>
+        <a class="city_3" href="#"><span class="Paris">Paris</span></a>
+        <a class="city_4" href="#"><span class="Lisbon">Lisbon</span></a>
       </nav>
-      <form action="#"><input type="text" placeholder="SEARCH" /></form>
+      <form class="searchCity" action="#">
+        <input type="text" placeholder="SEARCH" />
+      </form>
     </header>
     <section class="mainCity">
       <div class="mainCity__bigInfo">
-        <div>18/25 ℃</div>
-        <div><span>🌞</span> Sunny</div>
+        <div class="temInfo">
+          <span>Temperature: <span class="temp">18</span> ℃</span>
+          <span>Humidity: <span class="hum">60</span> %</span>
+        </div>
+
+        <div class="generalInfo"><span>🌞</span> Sunny</div>
       </div>
       <ul class="mainCity__smallInfo">
-        <li class="choosen"><h2>Monday</h2></li>
-        <li><h2>Tuesday</h2></li>
-        <li><h2>Wednesday</h2></li>
-        <li><h2>Thursday</h2></li>
-        <li><h2>Friday</h2></li>
+        <li class="day_1 choosenSmallBar"><h2>Monday</h2></li>
+        <li class="day_2"><h2>Tuesday</h2></li>
+        <li class="day_3"><h2>Wednesday</h2></li>
+        <li class="day_4"><h2>Thursday</h2></li>
+        <li class="day_5"><h2>Friday</h2></li>
       </ul>
     </section>
     <footer>Coded by Alina</footer>
