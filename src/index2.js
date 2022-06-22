@@ -133,14 +133,15 @@ function getForecastByCoords(coords) {
 
 function toCallApiByCityName(city, cityFlag) {
   if (!cityFlag) {
+    console.log("from flag");
     let uppercaseCity = `${city[0].toUpperCase()}${city
       .split("")
       .slice(1)
       .join("")}`;
     setDescrioption(".defaultCity", uppercaseCity);
     let defaultCityBySearch = document.querySelector(".city_1");
-    defaultCityBySearch.classList.add("choosenBigBar");
-    prevThisBigCity.classList.remove("choosenBigBar");
+    prevThisBigCity.classList.toggle("choosenBigBar");
+    defaultCityBySearch.classList.toggle("choosenBigBar");
     prevThisBigCity = defaultCityBySearch;
   }
 
@@ -175,9 +176,10 @@ searchFormElement.addEventListener("submit", getCityNamefromFormElement);
 
 let prevThisBigCity = document.querySelector(".city_1");
 function showBigCity() {
-  console.log(this);
+  console.log(this, "this");
   let fromDefaultCityBar = true;
   toCallApiByCityName(this.text, fromDefaultCityBar);
+  console.log(prevThisBigCity, "prevBigCity");
   this.classList.add("choosenBigBar");
   prevThisBigCity.classList.remove("choosenBigBar");
   prevThisBigCity = this;
