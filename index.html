@@ -19,33 +19,36 @@
     <header>
       <nav class="navBarCities">
         <a class="city_1 choosenBigBar" href="#"
-          ><span class="defaultCity Odessa">Odessa</span></a
+          ><span class="defaultCity">Odessa</span></a
         >
-        <a class="city_2" href="#"><span class="London">London</span></a>
-        <a class="city_3" href="#"><span class="Paris">Paris</span></a>
-        <a class="city_4" href="#"><span class="Lisbon">Lisbon</span></a>
+        <a class="city_2" href="#"><span>London</span></a>
+        <a class="city_3" href="#"><span>Paris</span></a>
+        <a class="city_4" href="#"><span>Lisbon</span></a>
       </nav>
       <form class="searchCity" action="#">
-        <input type="text" placeholder="SEARCH" />
+        <input type="text" placeholder="SEARCH" class="searchField" />
       </form>
     </header>
     <section class="mainCity">
       <div class="mainCity__bigInfo">
         <div class="temInfo">
+          <h2>Last update on <span class="lastUpdate"></span></h2>
           <span>Temperature: <span class="temp">18</span> ℃</span>
           <span>Humidity: <span class="hum">60</span> %</span>
         </div>
 
-        <div class="generalInfo"><span>🌞</span> Sunny</div>
+        <div class="generalInfo">
+          <img
+            class="icon"
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="icon"
+          />
+          <span class="weatherDescrioption">Sunny</span>
+        </div>
       </div>
-      <ul class="mainCity__smallInfo">
-        <li class="day_1 choosenSmallBar"><h2>Monday</h2></li>
-        <li class="day_2"><h2>Tuesday</h2></li>
-        <li class="day_3"><h2>Wednesday</h2></li>
-        <li class="day_4"><h2>Thursday</h2></li>
-        <li class="day_5"><h2>Friday</h2></li>
-      </ul>
+      <ul class="mainCity__smallInfo"></ul>
     </section>
+
     <footer>
       <a
         href="https://github.com/MolchanovaA/mainWeatherProject"
@@ -53,6 +56,6 @@
         >Coded by Alina</a
       >
     </footer>
-    <script src="./src/index.js"></script>
+    <script src="./src/index2.js"></script>
   </body>
 </html>
